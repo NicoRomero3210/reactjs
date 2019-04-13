@@ -1,0 +1,56 @@
+
+
+{
+
+	"tasks":[
+
+		{
+			"titulo": "Tarea 1",
+			"responsable": "Carlos",
+			"descripcion": "pija",
+			"prioridad": "baja"
+		},
+
+		{
+			"titulo": "Tarea 2",
+			"responsable": "Rockardo",
+			"descripcion": "3,14J",
+			"prioridad": "Alta"
+		},
+
+		{
+			"titulo": "Tarea 3",
+			"responsable": "Richar",
+			"descripcion": "Gato",
+			"prioridad": "Alta"
+		},
+		{
+			"titulo": "Tarea 4",
+			"responsable": "Gonza",
+			"descripcion": "Lobo",
+			"prioridad": "Media"
+		},
+		{
+			"titulo": "Tarea 5",
+			"responsable": "Mauri",
+			"descripcion": "Mafia",
+			"prioridad": "Media"
+		}
+	]
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

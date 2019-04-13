@@ -1,0 +1,27 @@
+Deberia ver cosas sobre las tecnologias que lista en el video onda nextjs, graphql, redux, etc
+
+Tambien deberia ver cosas de webpack y babel que no me acuerdo ahora, pero pa no tocar eso voy a laburar con create-react-app
+
+Para eso tiro la siguiente linea de comando en la consola
+
+npm install -g create-react-app
+
+Despues de que instale me dirijo al desktop y tiro en la consola
+
+create-react-app nuevoproyecto(yo le puse reactjs nomas), esto me crea la carpeta con las cosas configurada correctamente
+
+En la carpeta public esta el html que va a mostrar todo, ahi estan las cosas petes, el js de react y el css va en src, ya me trae ciertos documentos con ciertas cosas preconnfiguradas.
+
+Si tiro npm start en la consola dentro de la carpeta de mi proyecto entonces me crea un server y me ejecuta la pagina que trae por defecto en el localhost:3000, la vista de todo eso esta en 
+src/App.js
+
+
+
+
+
+
+
+
+
+
+

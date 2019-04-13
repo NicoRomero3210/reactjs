@@ -1,0 +1,83 @@
+
+El evento on change es, cunado el texto cambien en el input vamos a hacer algo, en este caso hago la funcion handleInputChange y eso se va a ejecutar cuando algo cambie.
+
+e.target.value me da los valores que voy metiendo en el input, si hago el console.log de eso me muestra cada sub cadena que voy metiendo hasta mostrarme la cadena final que deje en ese input
+
+e.target.name me da el nombre del input en el que estoy escribiendo, viene dado por el atributo name de la etiqueta input.
+
+Ahora debo pasarle al this.state los valores que meti en el formulario, para eso usamos el metodo this.seState() de la siguiente forma
+
+handleInput(e){
+	
+	const {value,name} = e.target ACA OBTENGO EL VALOR Y EL NOMBRE DEL INPUT
+	this.setState{
+
+		[name]:vaue;  ACA LE DIGO, EL ATRIBUTO QUE COINCIDA CON NAME DE STATE ACTUALIZALO CON VALUE.
+
+	}
+
+}
+
+-this.handleInput = this.handleInput.bind(this); 
+
+ACA LO QUE HACE ES DECIRLE AL COMPONENTE QUE ESTE METODO HACE REFERENCIA A this Y PERTENECE A ESTE COMPONENTE, PORQUE SINO PIERDE EL SCOPE SEGUN EL LOCO, EN POCAS PALABRAS, REACT SE DESCAJETA Y NO SABE A DONDE ESTA APUNTANDO, POR ESO HAY QUE DECIRLE QUE APUNTE A this, LO MISMO PASA CON EL RESTO DE LOS METODOS QUE CREAMOS NOSOTROS, BIND EN REALIDAD REEMPLAZA LOS PARAMETROS DE LA FUNCION AL QUE SE LE ESTA APLICANDO POR EL DE LOS PARAMETROS QUE LE ESTAMOS PASANDO, SIENDO EL PRIMER PARAMETRO ONJETIVO EL ELEMNTO this. ESTO SIEMPRE SE HACE DENTRO DEL CONSTRUCTOR
+
+
+
+-e.preventDefault() 
+
+ESTO EVITA QUE SE REFRESQUE LA PANTALLA, EN RELAIDAD, LO QUE AHCE EL RPEVENT DEFAULT ES LA LINEA DEL EVENTO QUE SE ESTA POR EJECUTAR, PERO ESE EVENTO SE PUEDE SEGUIR EJECUTANDO, ACA EN ESTE CASO LO QUE HACE ES DECIRLE, EVITA QUE AL TOCAR EL BOTON SE EJECUTE EL PRIMER EVENTO QUE ES QUE LA PAGINA SE REFRESQUE
+
+
+
+Tambien tengo que bindear la funcion handleSubmit();
+
+
+Lo que hago en Task es setear el state del Form, eso se lo tengo que apsar al state del App.js que es la aplicacion en si.
+
+Creo la funcion de agregar tarea handleAddTask() con la cual seteo el estado de App.js, lo que hago es unir el arreglo con la nueva tarea, eso se hace con:
+[...arregloEnCuestion, nuevoElemento ] en la etiqueta de TaskForm agrego una propiedad que se llame onAddTask={this.handleAddTask} y en el FormTask.js creo esa propiedad en el handleSubmit(acordarse que eso se crea mediante el atributo props de state state.props.onAddTask(this.state)), ahi le paso como parametro el estado del form para que lo lleve a App.js, a handleAddTask tmb lo tengo que bindear con this porque sino se rompe todo
+
+lo que podria hacer tmb, pero no lo hago aca, es poner cada zodape de codigo en App.js en componentes separados para que en ese doc no se haga tan extenso el codigo, esa es la onda, que App.js quede lo mas chico posible.
+
+Ahi empiezo a crear el metodo de remover, para eso creo el boton Borrar, le pongo que en el click ejecute el removeTask, el removeTask recibe como parametro el indice de la tarea dentro del arreglo. Al primer div le pongo el atributo key={i} para que se sepa que ese es el indice que estoy manejando, ese i viene de la funcion map.
+
+En onClick en ese boton ya hago lo del bind pero lo hago asi
+
+{this.removeTask.bind(this,i)}, es decir, ademas de pasarle el this tmb le paso el indeice i.
+
+esta es otra forma de hacer nomas, podria hacerlo como siempre, nada mas que tmb le agrego lo del indice
+
+Con filter recorro todo el arreglo y creo otro arreglo con los elementos del antiugo arreglo pero que cumplan con determinada condicion. En este caso le digo que me ponga los elementos que no tengan el mismo indice que el que le estoy pasando, y si tiene el mismo indice lo saltea.
+
+Hago un alert para confirmar el borrado
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

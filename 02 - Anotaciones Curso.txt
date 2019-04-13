@@ -1,0 +1,74 @@
+Webpack le permite importar css a un documento js y tranformarlo en js
+
+Lo primero que hice fue modificar el css, le puse un background negro, tambien le saque el margin y el padding, comente lo que estaba por defecto, entro a la pagina uigradients.com para buscar colores gradientes y los importo. El archivo index.css afecta a toda la app, no solo a un componente. En App.js esta el codigo de la aplicacion, el index.js solo arranca la aplicacion.
+
+Mirar cosas de progresive web app, el serviceWorker sirve para que se pueda seguir laburando incluso sin conexion a internet.
+
+ReactDOM.render(<App />, document.getElementById('root')) significa: renderiza App.js en el elemento root del archivo index.html, en relaidad busca en el objeto global el elemento root al cual lo encuentra en public/index.html
+
+Para cada componente tengo un css y un js con html, esto se integra en un solo archivo, App.js y App.css son un solo componente, empiezo a modificar App.js y App.css en el minuto 12:40.
+
+Elimino todo menos el logo y pongo un titulo de mierda, en el css elimino todo menos lo del logo el keyframes.
+
+Importo bootstrap y lo ensarto en el index.html en public.
+
+Meto la navegacion con nav en app.js. En React no se peuden renderizar dos etiquetas, por eso los elementos siempre van adentro de un div general 
+
+El className = "App" es la etiqueta div que encierra todo lo que hay que renderizar para ese componente App.
+
+el atribuo className se usa para que no haya conflicto con el class que se usa para definir un componente en js
+
+Estos archivos js que tienen html se los denomina jsx, no es html es lo que se va a convertir en html.
+
+Creo la carpeta components para poner ahi mis componentes, ahi pongo navigation.js qeu es el navbar, ahi hago el menjunje para crear el componente Navigation, lo exporto, y despues lo importo en App.js que es el componente "principal" por ahora. Para que el titulo cambie y no sea siempre el mismo tengo que usar las propiedades de JS, eso que quiero pasar lo pongo entre llaves y uso el metodo props de JS de esta forma 
+
+{this.props.titulo}
+
+Despues de escribir eso en navigation.js, agarro voy a App.js y en la etiqueta navigation le pongo el nombre de la propiedad que agregue con props en navigation.js y el valor que quiero ponerle, ahi en el doc lo documento para no perderme, ademas el trolo borra todo despues
+
+Ahora empiezo con lo de los estados en reactjs, los datos los posee un backend, pero cuando los traiga la interfaz tiene que almacenarlas en algun lado(en el navegador), eso es el estado de la aplicacion, creo un archivo JSON para poder simular datos traidos de un servidor, el archivo se llama tasks.json, los datos deberian estar almacenados en un servidor central.
+
+Agarro importo el json al App.js, y creo el constructor() que es el encargado de almacenar esos datos en memoria para poder ir refrescandolos, el constructor es el primer metodo que se ejecuta cuando se crea el componente, siempre al crearlo hay que poner el metodo super() para que herede los metodos y propiedades de react, despues usamos la propiedad state para poder decirle a react que use el estado del componente, tiene los datos o el estado de los datos, como tiutlos, cantidad de tareas, lo que se le asigne debe ser sencillo porque todo eso se almacena en memoria mietras react esta activo.
+
+A ese state le asigno las tareas que cree en el JSON, despues con el map creo las tarjetas y se las asigno a una constante tareas, eso recien el paso al return final para que me lo muestre en pantalla, tipo, el ultimo return es el que render muestra en pantalla(renderiza). Me tengo que acordar que lo que se pone entre llaves es codigo JS.
+
+Para mostrar la cantidad de tareas uso el emtodo length de los arreglos en JS 
+
+LOS COMPONENTES DE REACT SIEMRPE QUE SE PUEDA SE ESCRIBEN CON LA PRIMERA LETRA EN MAYUSCULA
+
+Creo en component el archivo TaskForm.js para crear el componente que tiene el formulario de tareas y ahi paso al proximo video
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
